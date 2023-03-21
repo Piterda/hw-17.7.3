@@ -1,0 +1,20 @@
+money = int(input ("Введите сумму вклада за год:"))
+
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+
+# получаем список значений процентных ставок
+percent = list(per_cent.values())
+# можно проверить print(percent)
+
+# создаем список сумм заработка на вкладе за год
+deposit = list()
+deposit.append(int(money/100*float(percent[0])))
+deposit.append(int(money/100*float(percent[1])))
+deposit.append(int(money/100*float(percent[2])))
+deposit.append(int(money/100*float(percent[3])))
+# выводим список сумм заработка на вкладах
+print(deposit)
+# находим максимальную сумму заработанную на вкладе
+# можно вывести print(max(deposit)),но в задании надо отобразить через индекс, поэтому:
+# выводим максимальную сумму заработанную на вкладе по индексу
+print("Максимальная сумма, которую вы можете заработать —", (deposit[1]))
